@@ -1,5 +1,5 @@
 {% set name = "botorch" %}
-{% set version = "0.3.0" %}
+{% set version = "0.3.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/pytorch/botorch/archive/v{{ version }}.tar.gz
-  sha256: ba8f68ec911070245d96ce10fb6b9d557cc5319037c7e4b57dd7f1549b3d097c
+  sha256: 51a912f45793dd0876b367aa925df61490308e90d396872b0b231e014465f26e
 
 
 build:
