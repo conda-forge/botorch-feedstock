@@ -5,9 +5,13 @@ Home: https://botorch.org
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/botorch-feedstock/blob/master/LICENSE.txt)
 
 Summary: Bayesian Optimization in PyTorch
+
+Development: https://github.com/pytorch/botorch
+
+Documentation: https://botorch.org/docs/introduction
 
 BoTorch is a library for Bayesian Optimization built on PyTorch.
 
