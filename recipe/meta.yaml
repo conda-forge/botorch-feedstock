@@ -1,18 +1,18 @@
 {% set name = "botorch" %}
-{% set version = "0.3.0" %}
+{% set version = "0.3.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/pytorch/botorch/archive/v{{ version }}.tar.gz
-  sha256: ba8f68ec911070245d96ce10fb6b9d557cc5319037c7e4b57dd7f1549b3d097c
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/botorch-{{ version }}.tar.gz
+  sha256: 8de1a11faeee942522c23bb03c6ed72eba67c40349ee4e588c6ff8e2fecb0a32
 
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -22,21 +22,23 @@ requirements:
   run:
     - python >=3.7
     - pytorch >=1.5
-    - gpytorch >=1.1.1
+    - gpytorch >=1.2
     - scipy
 test:
   imports:
     - botorch
     - botorch.acquisition
     - botorch.exceptions
+    - botorch.generation
     - botorch.models
     - botorch.optim
     - botorch.posteriors
     - botorch.sampling
     - botorch.test_functions
     - botorch.utils
+    - botorch.cross_validation
     - botorch.fit
-    - botorch.gen
+    - botorch.logging
     - botorch.settings
 
 about:
