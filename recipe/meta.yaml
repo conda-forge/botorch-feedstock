@@ -21,7 +21,7 @@ requirements:
     - pip
   run:
     - python >=3.7
-    - pytorch >=1.6
+    - pytorch >=1.5
     - gpytorch >=1.2
     - scipy
 test:
