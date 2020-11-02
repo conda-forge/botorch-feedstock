@@ -6,13 +6,13 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/pytorch/botorch/archive/v{{ version }}.tar.gz
-  sha256: 51a912f45793dd0876b367aa925df61490308e90d396872b0b231e014465f26e
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/botorch-{{ version }}.tar.gz
+  sha256: 187a20ecad7d9c1436b558054735887043e0bc44bc06801be1b775be2ad7eec6
 
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
