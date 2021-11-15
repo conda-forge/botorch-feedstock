@@ -1,5 +1,5 @@
 {% set name = "botorch" %}
-{% set version = "0.4.0" %}
+{% set version = "0.5.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/botorch-{{ version }}.tar.gz
-  sha256: d98dd303294207b955a794b12433cc5ac2331e36cebf1b94f75c5f5162be861b
+  sha256: fa0f6ad582f3d3320d6b59315cd859ccba6ffab44a0d9a7681b92af89c2490bd
 
 
 build:
@@ -20,12 +20,14 @@ requirements:
   host:
     - python >=3.7
     - pip
+    - setuptools >=40.0,<48
     - setuptools_scm
   run:
     - python >=3.7
-    - pytorch >=1.7.1
-    - gpytorch >=1.4
+    - pytorch >=1.8.1
+    - gpytorch >=1.5.1
     - scipy
+
 test:
   imports:
     - botorch
@@ -57,3 +59,4 @@ about:
 extra:
   recipe-maintainers:
     - maclandrol
+    - ngam
