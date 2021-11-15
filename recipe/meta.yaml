@@ -20,12 +20,14 @@ requirements:
   host:
     - python >=3.7
     - pip
+    - setuptools >=40.0,<48
     - setuptools_scm
   run:
     - python >=3.7
-    - pytorch >=1.7.1
-    - gpytorch >=1.4
+    - pytorch >=1.8.1
+    - gpytorch >=1.5.1
     - scipy
+
 test:
   imports:
     - botorch
@@ -57,3 +59,4 @@ about:
 extra:
   recipe-maintainers:
     - maclandrol
+    - ngam
