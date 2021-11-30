@@ -124,4 +124,5 @@ Feedstock Maintainers
 =====================
 
 * [@maclandrol](https://github.com/maclandrol/)
+* [@ngam](https://github.com/ngam/)
 
