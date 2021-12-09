@@ -1,6 +1,5 @@
 {% set name = "botorch" %}
-{% set version = "0.5.1" %}
-
+{% set version = "0.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,26 +7,24 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/botorch-{{ version }}.tar.gz
-  sha256: fa0f6ad582f3d3320d6b59315cd859ccba6ffab44a0d9a7681b92af89c2490bd
-
+  sha256: e8d4c2c7187c20b12251f7b791b964ce311ed8cdca28b8bb7ebbedf745f92987
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script:
-    - rm -rf test
     - {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - python >=3.7
     - pip
-    - setuptools >=40.0,<48
+    - setuptools <48
     - setuptools_scm
   run:
     - python >=3.7
-    - pytorch >=1.8.1
-    - gpytorch >=1.5.1
+    - pytorch >=1.9
+    - gpytorch >=1.6
     - scipy
 
 test:
