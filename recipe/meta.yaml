@@ -26,6 +26,8 @@ requirements:
     - pytorch >=1.9
     - gpytorch >=1.6
     - scipy
+    - pyro-ppl
+    - multipledispatch
 
 test:
   imports:
