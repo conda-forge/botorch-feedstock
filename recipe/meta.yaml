@@ -1,5 +1,5 @@
 {% set name = "botorch" %}
-{% set version = "0.6.5" %}
+{% set version = "0.6.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/botorch-{{ version }}.tar.gz
-  sha256: 696ce5a68e4bb0f6ce4584940b5e4eab9634d48b69b1dbb134ef01ebbb486884
+  sha256: 5966c2f5a9b676bd0f26a313d4e9ed46a121dcb045178a5359d8514b7e543fd3
 
 build:
   noarch: python
