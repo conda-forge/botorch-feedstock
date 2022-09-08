@@ -1,5 +1,5 @@
 {% set name = "botorch" %}
-{% set version = "0.6.6" %}
+{% set version = "0.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/botorch-{{ version }}.tar.gz
-  sha256: 5966c2f5a9b676bd0f26a313d4e9ed46a121dcb045178a5359d8514b7e543fd3
+  sha256: d63495c0d2126b31a571c21377738771fa5812460c5b4f6d2438d52855bd0a3d
 
 build:
   noarch: python
@@ -23,10 +23,10 @@ requirements:
     - setuptools_scm
   run:
     - python >=3.7
-    - pytorch >=1.9
-    - gpytorch >=1.6
+    - pytorch >=1.11
+    - gpytorch >=1.9.0
     - scipy
-    - pyro-ppl ==1.8.0
+    - pyro-ppl >=1.8.2
     - multipledispatch
 
 test:
