@@ -1,11 +1,11 @@
-About botorch
-=============
+About botorch-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/botorch-feedstock/blob/main/LICENSE.txt)
 
 Home: https://botorch.org
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/botorch-feedstock/blob/main/LICENSE.txt)
 
 Summary: Bayesian Optimization in PyTorch
 
