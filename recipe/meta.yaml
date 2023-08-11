@@ -23,10 +23,11 @@ requirements:
     - setuptools_scm
   run:
     - python >=3.7
-    - pytorch >=1.11
-    - gpytorch >=1.9.0
+    - linear_operator ==0.5.1
+    - pytorch >=1.13.1
+    - gpytorch ==1.11
     - scipy
-    - pyro-ppl >=1.8.2
+    - pyro-ppl >=1.8.4
     - multipledispatch
 
 test:
@@ -45,6 +46,10 @@ test:
     - botorch.fit
     - botorch.logging
     - botorch.settings
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://botorch.org
@@ -61,3 +66,4 @@ extra:
   recipe-maintainers:
     - maclandrol
     - ngam
+    - thewchan
