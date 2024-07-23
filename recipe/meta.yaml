@@ -1,5 +1,5 @@
 {% set name = "botorch" %}
-{% set version = "0.11.1" %}
+{% set version = "0.11.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/botorch-{{ version }}.tar.gz
-  sha256: e5533fcb05d446cf1319f988be4f31196bbed2b4197fb43c5b77664c9f020362
+  sha256: 600ab08f8007a94adbc5acf35073e7a25f55b58e85b2d895c101dabef74121ef
 
 build:
   noarch: python
@@ -24,12 +24,13 @@ requirements:
     - toml
   run:
     - python >=3.9
-    - linear_operator ==0.5.1
+    - linear_operator ==0.5.2
     - pytorch >=1.13.1
-    - gpytorch ==1.11
+    - gpytorch ==1.12
     - scipy
     - pyro-ppl >=1.8.4
     - multipledispatch
+    - numpy <2.0
 
 test:
   imports:
