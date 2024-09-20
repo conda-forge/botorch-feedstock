@@ -17,20 +17,19 @@ build:
 
 requirements:
   host:
-    - python >=3.9
+    - python >=3.10
     - pip
     - setuptools
     - setuptools_scm
     - toml
   run:
-    - python >=3.9
-    - linear_operator ==0.5.2
-    - pytorch >=1.13.1
-    - gpytorch ==1.12
+    - python >=3.10
+    - linear_operator ==0.5.3
+    - pytorch >=2.0.1
+    - gpytorch ==1.13
     - scipy
     - pyro-ppl >=1.8.4
     - multipledispatch
-    - numpy <2.0
 
 test:
   imports:
