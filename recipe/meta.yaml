@@ -25,9 +25,9 @@ requirements:
     - toml
   run:
     - python >={{ python_min }}
-    - linear_operator ==0.5.3
+    - linear_operator ==0.6
     - pytorch >=2.0.1
-    - gpytorch ==1.13
+    - gpytorch ==1.14
     - scipy
     - pyro-ppl >=1.8.4
     - multipledispatch
