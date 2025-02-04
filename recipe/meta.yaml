@@ -27,7 +27,7 @@ requirements:
   run:
     - python >={{ python_min }}
     - typing_extensions
-    - pyre_extensions
+    - pyre-extensions
     - gpytorch ==1.14
     - linear_operator ==0.6
     - pytorch >=2.0.1
