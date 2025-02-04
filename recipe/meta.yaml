@@ -1,6 +1,6 @@
-{% set python_min = '3.10' %}
+{% set python_min = "3.10" %}
 {% set name = "botorch" %}
-{% set version = "0.12.0" %}
+{% set version = "0.13.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,11 +8,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/botorch-{{ version }}.tar.gz
-  sha256: 6c810efa0a9cba4cca8ccd829ae8e9bee88ed4e08548c072a19b423c114bd211
+  sha256: 9672b03c3a95b88d6b500371797f51f503232bdc19d495119769994fa811ebc4
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script:
     - {{ PYTHON }} -m pip install . -vv
 
@@ -23,14 +23,18 @@ requirements:
     - setuptools
     - setuptools_scm
     - toml
+    - wheel
   run:
     - python >={{ python_min }}
-    - linear_operator ==0.5.3
+    - typing_extensions
+    - pyre-extensions
+    - gpytorch ==1.14
+    - linear_operator ==0.6
     - pytorch >=2.0.1
-    - gpytorch ==1.13
-    - scipy
     - pyro-ppl >=1.8.4
+    - scipy
     - multipledispatch
+    - threadpoolctl
 
 test:
   imports:
