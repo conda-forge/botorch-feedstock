@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: botorch
-  version: "0.16.1"
+  version: "0.17.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/botorch-${{ version }}.tar.gz
-  sha256: 2a9ec7e43f1acddcf0c170ba084443e128696bc02f0ef9a48cc720f13f71713b
+  sha256: 32e5c3ee99504b909d3a495e35c0b193566a5851e6a50e761b67338d11086749
 
 build:
   number: 0
