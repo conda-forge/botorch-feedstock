@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: botorch
-  version: "0.17.2"
+  version: "0.18.0"
   python_min: "3.11"
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/botorch-${{ version }}.tar.gz
-  sha256: 371461f35d882796a87e70ca9a529f31287f9ed984fd9ca3a1d311af58d3fa0c
+  sha256: f2928e67b6cff8450891874c0ab97dd59f811ae9169a47543e1dad6c77019f7f
 
 build:
   number: 0
@@ -31,13 +31,16 @@ requirements:
     - python >=${{ python_min }}
     - typing_extensions
     - pyre-extensions
-    - gpytorch >=1.14.2
-    - linear_operator >=0.6
-    - pytorch >=2.0.1
-    - pyro-ppl >=1.8.4
+    - gpytorch >=1.15.2
+    - linear_operator >=0.6.1
+    - pytorch >=2.4
+    - jax >=0.4.35,<0.10
+    - jaxlib >=0.4.35,<0.10
+    - numpyro >=0.18.0
     - scipy
     - multipledispatch
     - threadpoolctl
+    - ninja-python
 
 tests:
   - python:
@@ -57,7 +60,9 @@ tests:
         - botorch.logging
         - botorch.settings
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   license: MIT
