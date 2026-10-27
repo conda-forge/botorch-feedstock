@@ -14,9 +14,14 @@ source:
   sha256: f3e444efae2622b3ad88a5efe1859583ba2cd0913761f76677a189b2fd1aee99
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script:
+    # ninja is only used by an optional torch.cpp_extension JIT path
+    # (acquisition/multi_objective/logei.py) that also needs a C++
+    # toolchain; conda-forge's ninja ships no dist-info, so drop the
+    # dependency before building to keep pip check honest.
+    - sed -i '/^\s*"ninja",$/d' pyproject.toml
     - ${{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -40,7 +45,6 @@ requirements:
     - scipy
     - multipledispatch
     - threadpoolctl
-    - ninja-python
 
 tests:
   - python:
